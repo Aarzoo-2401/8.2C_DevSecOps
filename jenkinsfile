@@ -7,9 +7,11 @@ git branch: 'main', url: ' https://github.com/Aarzoo-2401/8.2C_DevSecOps.git'
 }
 }
 stage('Install Dependencies') {
-steps {
-bat 'npm install'
+    steps {
+        bat 'npm install --legacy-peer-deps'
+    }
 }
+
 }
 stage('Run Tests') {
 steps {
